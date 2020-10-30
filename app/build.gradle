@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+apply from: rootProject.file('config.gradle')
+
+android {
+    compileSdkVersion android_version
+    buildToolsVersion buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.example.muproject"
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding{
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //网络相关
+    implementation okhttp
+    implementation rxjava
+    implementation rxAndroid
+    implementation Retrofit
+    implementation converter_scalars
+    implementation converter_gson
+    implementation adapter_rxjava
+    implementation logging_interceptor
+    implementation glide
+    implementation glidecompiler
+    implementation BaseRecyclerViewAdapterHelper
+    implementation banner
+    implementation immersionbar
+    implementation immersionbarcomponents
+    implementation QMUI
+    implementation multidex
+    implementation tangram
+    implementation FlycoTabLayout_Lib
+
+    implementation SmartRefreshLayout
+    implementation SmartRefreshHead
+    implementation litepal
+
+    implementation appcompat
+    implementation constraintlayout
+    implementation lifecycle_extensions
+    implementation viewmodel
+    implementation cardView
+    implementation recyclerView
+    implementation swiperefreshlayout
+    implementation support_design
+    implementation coordinatorlayout
+}
