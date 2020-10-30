@@ -34,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
         mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         employeeDataAdapter = new EmployeeDataAdapter();
         recyclerView.setAdapter(employeeDataAdapter);
-        getAllEmployee();
+        getAllEmployee();//执行接口
     }
+
     private void getAllEmployee() {
         mainViewModel.getAllEmployee().observe(this, new Observer<List<Employee>>() {
             @Override
