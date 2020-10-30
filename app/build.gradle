@@ -45,7 +45,6 @@ dependencies {
     implementation rxjava
     implementation rxAndroid
     implementation Retrofit
-    implementation converter_scalars
     implementation converter_gson
     implementation adapter_rxjava
     implementation logging_interceptor

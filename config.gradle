@@ -16,12 +16,11 @@ ext{
     support_design = "com.google.android.material:material:1.2.1"
     //网络相关
     okhttp = 'com.squareup.okhttp3:okhttp:3.12.1'
-    rxjava =  "io.reactivex.rxjava2:rxjava:2.2.19"
+    rxjava =  "io.reactivex.rxjava2:rxjava:2.2.20"
     rxAndroid = 'io.reactivex.rxjava2:rxandroid:2.1.1'
     Retrofit =  'com.squareup.retrofit2:retrofit:2.6.2'
-    converter_scalars = 'com.squareup.retrofit2:converter-scalars:2.2.0'
-    converter_gson =  "com.squareup.retrofit2:converter-gson:2.2.0"
-    adapter_rxjava = 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    converter_gson =  "com.squareup.retrofit2:converter-gson:2.4.0"
+    adapter_rxjava = 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     logging_interceptor = 'com.squareup.okhttp3:logging-interceptor:3.4.1'
 
     cardView =  'androidx.cardview:cardview:1.0.0'
@@ -60,4 +59,5 @@ ext{
     SmartRefreshHead = 'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
 
     litepal = 'org.litepal.guolindev:core:3.2.2' //三方数据库
+
 }
